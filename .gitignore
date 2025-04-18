@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Логи и данные
+*.log
+*.sqlite3
+
+# Конфиги
+.env
+.secrets
