@@ -17,6 +17,12 @@ class ScooterRedirectPage(BasePage):
     def click_yandex_logo_to_redirect(self):
         self.click_to_element(RedirectPageLocators.YANDEX_LOGO)
 
+    @allure.step('Смена вкладки браузера')
+    def change_tab(self, driver):
+        current_tab = driver.window_handles[-1]
+        driver.switch_to.window(current_tab)
+
+
     @allure.step('Ожидание отображения лого дзена')
     def wait_dzen_logo_on_screen(self):
         return self.find_element_with_wait(RedirectPageLocators.DZEN_LOGO)

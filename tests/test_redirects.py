@@ -17,9 +17,8 @@ class TestScooterRedirectPage:
                         ' переходим к новой вкладке и проверям налигие лого дзена на экране')
     def test_click_yandex_logo(self, redirect_page, driver):
         redirect_page.click_yandex_logo_to_redirect()
-        current_tab = driver.window_handles[-1]
-        driver.switch_to.window(current_tab)
         yandex_page = ScooterRedirectPage(driver)
+        yandex_page.change_tab(driver)
         logo = yandex_page.wait_dzen_logo_on_screen()
 
         assert logo.is_displayed(), 'Иконка дзена не отобразилась на экране'

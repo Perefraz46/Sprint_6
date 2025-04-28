@@ -1,10 +1,12 @@
 from locators.order_page_locators import OrderPageLocators
 from random import randint
 
-
-class Data:
+class Url:
     URL_MAIN = 'https://qa-scooter.praktikum-services.ru/'
     URL_ORDER = 'https://qa-scooter.praktikum-services.ru/order'
+
+
+class Data:
 
     ANSWERS_DATA = ['Сутки — 400 рублей. Оплата курьеру — наличными или картой.',
                     'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.',
